@@ -378,6 +378,8 @@ def process(
         dem_items,
         resolution,
     )
+    print("Datasets created")
+    print(result)
 
     return date, result
 
@@ -474,6 +476,7 @@ def main(sample, index, subset, bucket, localpath, dateranges):
             CLOUD_COVER_PERCENTAGE,
             NODATA_PIXEL_PERCENTAGE,
         )
+
         if date is None:
             continue
         else:
@@ -485,8 +488,12 @@ def main(sample, index, subset, bucket, localpath, dateranges):
                 part[:, subset[1] : subset[3], subset[0] : subset[2]] for part in pixels
             ]
 
+        print("computing on pixels")
         pixels = [part.compute() for part in pixels]
+        print(pixels)
+        print("finished computing on pixels")
 
+        print("Sending to tiler")
         tiler(pixels, date, mgrs, bucket, localpath)
 
         if match_count == DATES_PER_LOCATION:
