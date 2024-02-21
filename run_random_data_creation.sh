@@ -6,7 +6,7 @@ for i in {1..100}; do
 
     # Execute your script with the random index
     python scripts/datacube.py \
-        --sample "scipts/mgrs_full.fgb" \
+        --sample "scripts/mgrs_full.fgb" \
         --bucket "cc-dataocean/clay-model-training-data" \
         --index $index
 done
