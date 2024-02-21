@@ -1,0 +1,6 @@
+
+
+geopandas
+planetary-computer
+stackstac
+rioxarray
