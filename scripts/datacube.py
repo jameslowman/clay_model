@@ -443,6 +443,7 @@ def convert_attrs_and_coords_objects_to_str(data):
     type=str,
     help="Comma separated list of date ranges, each provided as YYYY-MM-DD/YYYY-MM-DD.",
 )
+
 def main(sample, index, subset, bucket, localpath, dateranges):
     index = int(index)
     tiles = gpd.read_file(sample)

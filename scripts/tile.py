@@ -57,11 +57,11 @@ def filter_clouds_nodata(tile):
 
 def tile_to_dir(stack, date, mgrs, bucket, dir):
     """
-    Function to tile a multi-dimensional imagery stack while filtering out
+    Function to tile a multidimensional imagery stack while filtering out
     tiles with high cloud coverage or no-data pixels.
 
     Args:
-    - stack (xarray.Dataset): The input multi-dimensional imagery stack.
+    - stack (xarray.Dataset): The input multidimensional imagery stack.
     - date (str): Date string yyyy-mm-dd
     - mgrs (str): MGRS Tile id
     - bucket(str): AWS S3 bucket to write tiles to
