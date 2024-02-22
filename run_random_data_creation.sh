@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..100}; do
+for i in {1..1000}; do
     # Generate a random number between 0 and 4000
     index=$(($RANDOM % 56687))
 
