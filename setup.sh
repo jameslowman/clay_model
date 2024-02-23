@@ -4,7 +4,7 @@
 sudo apt-get install tmux
 
 # Create a new tmux session
-tmux
+tmux new -s data_creation
 
 # Checkout the 'james-dev' branch
 git checkout james-dev
